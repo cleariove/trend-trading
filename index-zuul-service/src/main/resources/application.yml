@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: index-zuul-service
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1.0
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#所有的访问 /api-codes/ 的请求，都会自动转到 INDEX-CODES-SERVICE 去。
+#  INDEX-CODES-SERVICE就代表了eureka中微服务的名称，自动转大写
+zuul:
+  routes:
+    api-a:
+      path: /api-codes/**
+      serviceId: INDEX-CODES-SERVICE
+    api-b:
+      path: /api-backtest/**
+      serviceId: TREND-TRADING-BACKTEST-SERVICE
+    api-c:
+      path: /api-view/**
+      serviceId: TREND-TRADING-BACKTEST-VIEW
