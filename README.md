@@ -11,4 +11,4 @@ index-zuul-service是一个网关微服务，用于*统一入口*，*鉴权校�
 2. 采用消息队列代替http通信
 + ## config-server
 1. bootstrap.yml与application.yml的具体差别
-2. springboot中自定义加载配置文件
+2. springboot中添加并读取配置文件
