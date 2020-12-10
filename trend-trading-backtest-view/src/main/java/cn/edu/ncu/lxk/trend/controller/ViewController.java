@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ViewController
 {
-    @Value("${version}")
+    @Value("${version:123131}")
     private String version;
 
     @GetMapping("/")
