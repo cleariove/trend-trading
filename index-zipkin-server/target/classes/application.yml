@@ -7,13 +7,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
-zipkin:
-  storage:
-    StorageComponent: elasticsearch
-    type: elasticsearch
-    elasticsearch:
-      hosts: 127.0.0.1:9411
-      cluster: elasticsearch
+
 
 
 # 关闭自动配置启用所有请求得检测

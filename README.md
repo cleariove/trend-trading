@@ -12,3 +12,11 @@ index-zuul-service是一个网关微服务，用于*统一入口*，*鉴权校�
 + ## config-server
 1. bootstrap.yml与application.yml的具体差别
 2. springboot中添加并读取配置文件
++ ## RabbitMQ
+1. 对底层原理，协议的深入了解
+2. 通过demo代码实现各种模式
+3. 了解AMQP协议
+4. 对View中使用mq的情况进行优化，时数据发送给特定的队列而不是广播形式
++ ## Spring
+1. @RefreshScope
+2. spring-boot-starter-actuator依赖

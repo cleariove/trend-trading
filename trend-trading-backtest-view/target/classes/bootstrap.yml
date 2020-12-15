@@ -4,13 +4,22 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
 spring:
-#  application:
-#    name: global-test
   cloud:
-    config: #读取哪个仓库哪个分支的哪个目录
+    #接入配置中心
+    config:
       label: master #分支
-      name: global-test
-      profile: dev
+      name: global-test #读取的应用名（文件名）
+      profile: dev #读取的环境
       discovery:
         enabled: true
-        service-id: index-config-server
+        service-id: index-config-server #eureka中的服务名称，表示通过这个服务进行拉取
+    #接入bus消息总线
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
